@@ -13,6 +13,6 @@
 
 >>Extenciones<<
 
-Ef core power tools=Genera automaticamente entidades y dbcontext a partir de una base de datos 
+>>Ef core power tools=Genera automaticamente entidades y dbcontext a partir de una base de datos 
 
 
