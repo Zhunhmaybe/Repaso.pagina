@@ -1,5 +1,6 @@
 //1A)using to work with Entity Framework 
 using Microsoft.EntityFrameworkCore;//para hacer las conecciones de tipo sql server
+using Repaso.pagina.Pagina.Data;//importar el namespace del dbcontext
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,7 @@ const string ConnectionName = "DefaultConnection";
 var conecctionString=builder.Configuration.GetConnectionString(ConnectionName) ?? throw new InvalidOperationException($"Connection string '{ConnectionName}' not found.");
 
 //3B)add DBContext to services
-
+builder.Services.AddDbContext<DBContext>(options => options.UseSqlServer(conecctionString));
 
 
 // Add services to the container.
